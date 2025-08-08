@@ -27,8 +27,8 @@ This is a Laravel + Inertia.js project using Vue/React (choose one) for building
 
 ```bash
 # Clone the repository
-git clone [<your-repo-url>](https://github.com/dwitidibyajyoti/laravel-module-manager.git)
-cd [<project-folder>](https://github.com/dwitidibyajyoti/laravel-module-manager.git)
+git clone https://github.com/dwitidibyajyoti/laravel-module-manager.git
+cd laravel-module-manager
 
 # Install PHP dependencies
 composer install
