@@ -1,4 +1,5 @@
 {
     "FormSubmit": false,
-    "Backup": true
+    "Backup": false,
+    "UserActivity": true
 }
