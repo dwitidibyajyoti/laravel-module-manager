@@ -1,4 +1,4 @@
-import { useState, DragEvent, ChangeEvent, FormEventHandler } from 'react';
+import { useState, DragEvent, ChangeEvent, FormEventHandler, useEffect } from 'react';
 import { Head } from '@inertiajs/react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -51,11 +51,19 @@ const UploadModule = () => {
 
         const formData = new FormData();
         formData.append('module', file);
+        const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+
+        console.log(token, '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
 
         try {
             const res = await fetch('/modules/upload', {
                 method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': token ?? '',
+                },
                 body: formData,
+                credentials: 'include', // ✅ VERY IMPORTANT
+
             });
 
             const data = await res.json();
