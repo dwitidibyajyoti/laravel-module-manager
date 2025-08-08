@@ -47,3 +47,12 @@ php artisan migrate
 # Run dev server
 npm run dev
 php artisan serve
+
+
+## 📂 Module Access URLs
+
+You can access the modules at the following routes (after uploading):
+
+- 🔁 **Backup Module**: [http://127.0.0.1:8000/backups](http://127.0.0.1:8000/backups)
+- 📥 **Form Submit Module**: [http://127.0.0.1:8000/formsubmit](http://127.0.0.1:8000/formsubmit)
+- 👤 **User Activity Module**: [http://127.0.0.1:8000/useractivities](http://127.0.0.1:8000/useractivities)
