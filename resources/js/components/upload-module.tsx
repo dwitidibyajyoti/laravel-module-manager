@@ -53,8 +53,6 @@ const UploadModule = () => {
         formData.append('module', file);
         const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
 
-        console.log(token, '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
-
         try {
             const res = await fetch('/modules/upload', {
                 method: 'POST',
