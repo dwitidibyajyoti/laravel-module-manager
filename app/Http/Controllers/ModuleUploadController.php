@@ -45,8 +45,10 @@ class ModuleUploadController extends Controller
 
             $zip->extractTo($extractPath);
             $zip->close();
+            exec('composer dump-autoload');
             return response()->json(['success' => true, 'message' => 'Module uploaded and extracted successfully.']);
         }
+        exec('composer dump-autoload');
 
         return response()->json(['success' => false, 'message' => 'Failed to upload module.'], 500);
     }
